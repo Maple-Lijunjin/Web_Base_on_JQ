@@ -1,0 +1,261 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>TOP APP</title>
+<style>
+body{text-align:center; 
+  width:940px;
+  margin:0 auto;}
+#container{width:940px; 
+margin-left:auto;
+margin-right:auto;
+text-align: center;}
+#up{width:940px;height:289px;float:left;}
+#header{width:940px;height:24px;background:#CCC;text-align: center;}
+#down{width:940px;}
+
+  .datatable tr:hover,.datatable tr.hilite
+    {
+    background-color:#99FF66;
+    color:#0000CC;
+    }
+#middle{width:940px;height:60px;}
+
+#footer {	
+	margin: 0px auto;
+	position: relative;
+	background-color:#FFF;
+	border-top: 9px solid #F7F7F6;
+	width: 940px;
+	height:40px;
+	padding: 5px 0;
+	clear: both;
+}
+
+#footer h2 {
+	maring: 0;
+	text-align: center;
+	font: normal 10px Verdana, Arial, Helvetica, sans-serif;
+	color: #33FFCC;
+}
+
+#footer h2 a:visited, #footer h2 a:link {
+	color: #D3D8C4;
+	text-decoration: none;
+	border-bottom: 1px dotted #D3D8C4;
+}
+
+#footer h2 a:hover {
+	color: #F7F7F6;
+	text-decoration: none;
+	border-bottom: none;
+	background-color: #A5003B;
+}
+
+
+#right p strong {
+	color: #FF8080;
+}
+#footer p a {
+	font-family:Arial, Helvetica, sans-serif;
+	color:#80FFFF;
+}
+
+
+
+
+
+</style>
+  <link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+  <link rel="stylesheet" type="text/css" href="table.css" />
+ <script src="js/jquery-1.9.1.min.js"></script>
+ <script type="text/javascript">
+ $(document).ready(function(){
+ $('ul#nav li').hover(function(){
+ $(this).find('.subnav').slideDown('slow');
+ $(this).closest('a').addClass('active');
+ },function(){
+ $(this).find('.subnav').slideUp('fast');
+  $(this).find('a').removeClass('active');
+ });
+ });
+ $(document).ready(function(){
+ //Main Navigation HighLight Script
+  var path=location.pathname;
+  var pathArray=path.split('/');
+  var pArrLength=pathArray.length;
+  for(i=0;i<pArrLength;i++){
+  $("a[href*='"+pathArray[i]+"']").addClass("selected");
+  }
+  });
+  
+  var rows = document.getElementsByTagName('tr');//取得行
+    for(var i=0 ;i<rows.length; i++)
+    {
+        rows[i].onmouseover = function(){//鼠标移上去,添加一个类'hilite'
+            this.className += 'hilite';
+        }
+        rows[i].onmouseout = function(){//鼠标移开,改变该类的名称
+            this.className = this.className.replace('hilite','');
+        }
+    }
+ </script>
+
+
+</head>
+
+<body>
+<div class="container">
+<div id="up">
+<div id="header">
+ <ul id="nav"> 
+              <li><a href="word.html">UNIQUE</a> 
+                </li>  
+                <li><a href="#">社交</a> 
+                    <ul class="subnav"> 
+                        <li><a href="http://www.phpddt.com/">聊天</a></li> 
+                        <li><a href="http://www.phpddt.com/">交友</a></li> 
+                    </ul> 
+                </li> 
+  <li><a href="#">壁纸</a> 
+                    <ul class="subnav"> 
+                        <li><a href="http://www.phpddt.com/">动态壁纸</a></li> 
+                        <li><a href="http://www.phpddt.com/">桌面主题</a></li> 
+                    </ul> 
+                </li> 
+                <li><a href="#">摄影</a> 
+                    <ul class="subnav"> 
+                        <li><a href="http://www.phpddt.com/">相机</a></li> 
+                        <li><a href="http://www.phpddt.com/">照片美化</a></li> 
+                    </ul> 
+                </li> 
+                <li><a href="#">影音</a> 
+                    <ul class="subnav"> 
+                        <li><a href="#">音乐</a></li> 
+                        <li><a href="#">电影</a></li> 
+                         <li><a href="#">播放器</a></li>
+                    </ul> 
+                </li> 
+                <li><a href="#">生活</a> 
+                    <ul class="subnav"> 
+                        <li><a href="#">日历</a></li> 
+                        <li><a href="#">天气</a></li> 
+                    </ul> 
+                </li> 
+                <li><a href="#">学习</a> 
+                    <ul class="subnav"> 
+                        <li><a href="#">笔记</a></li> 
+                        <li><a href="#">考试</a></li> 
+                    </ul> 
+                </li> 
+				   <li><a href="#">旅行</a> 
+                    <ul class="subnav"> 
+                        <li><a href="#">攻略</a></li> 
+                        <li><a href="#">购票</a></li> 
+                         <li><a href="#">航班酒店</a></li> 
+                          <li><a href="#">导航</a></li> 
+                    </ul> 
+                </li> 
+                  <li>
+                  <a href="#">阅读</a> 
+                    <ul class="subnav"> 
+                        <li><a href="#">电子书</a></li> 
+                        <li><a href="#">漫画</a></li> 
+                    </ul> 
+                </li> 
+
+</ul>
+</div>
+<div id="title"><img src="images/title.png" width="940" height="205"></div>
+<div id="middle"><img src="images/middle2.png" width="940" height="60"></div>
+</div>
+<div id="down">
+ <table class="datatable" summary="test">
+        <tr>
+            <th>TYPE</th>
+            <th>APP</th>
+            <th>WHAT CAN I DO</th>
+        </tr>
+        <tr>
+            <td>沐浴晨光</td>
+            <td width="600" height="105"><img src="images/pic1.png" width="600" height="105"></td>
+            <td>唤醒你的身体和大脑</td>
+        </tr>
+        <tr>
+            <td>准备出发</td>
+            <td width="600" height="105"><img src="images/pic2.png" width="600" height="105"></td>
+            <td>让平凡之路都变成冒险旅途</td>
+        </tr>
+       <tr>
+            <td>专注之美</td>
+            <td width="600" height="105"><img src="images/pic3.png" width="600" height="105"></td>
+            <td>学会让每段时间都有效率</td>
+        </tr>
+        <tr>
+            <td>食色俱佳</td>
+            <td width="600" height="105"><img src="images/pic4.png" width="600" height="105"></td>
+            <td>唯美食与运动不可辜负</td>
+        </tr>
+        <tr>
+            <td>动静皆宜</td>
+            <td width="600" height="105"><img src="images/pic5.png" width="600" height="105"></td>
+            <td>用72种姿势拍照</td>
+        </tr>
+        <tr>
+            <td>变化有方</td>
+            <td width="600" height="105"><img src="images/pic6.png" width="600" height="105"></td>
+            <td>不单调的手机必备工具</td>
+        </tr>
+        <tr>
+            <td>朝闻夕知</td>
+            <td width="600" height="105"><img src="images/pic7.png" width="600" height="105"></td>
+            <td>在碎片时间中拾获阅读乐趣</td>
+        </tr>
+        <tr>
+            <td>智慧无穷</td>
+            <td width="600" height="105"><img src="images/pic8.png" width="600" height="105"></td>
+            <td>让学习无处不在</td>
+        </tr>
+        <tr>
+            <td>视听之境</td>
+            <td width="600" height="105"><img src="images/pic9.png" width="600" height="105"></td>
+            <td>进入小屏时代的视听幻境</td>
+        </tr>
+        <tr>
+            <td>欣赏孤独</td>
+            <td width="600" height="105"><img src="images/pic10.png" width="600" height="105"></td>
+            <td>我们都是孤独星人</td>
+        </tr>
+        <tr>
+            <td>灵魂游戏</td>
+            <td width="600" height="105"><img src="images/pic11.png" width="600" height="105"></td>
+            <td>最好的游戏一定是感动心灵的</td>
+        </tr>
+        <tr>
+            <td>人文科技</td>
+            <td width="600" height="105"><img src="images/pic12.png" width="600" height="105"></td>
+            <td>向经典致敬</td>
+        </tr>
+        <tr>
+            <td>普通文艺</td>
+            <td width="600" height="105"><img src="images/pic13.png" width="600" height="105"></td>
+            <td>普通青年们的文艺爱好</td>
+        </tr>
+        <tr>
+            <td>记录生活</td>
+            <td width="600" height="105"><img src="images/pic14.png" width="600" height="105"></td>
+            <td>日记是写给生活的情书</td>
+        </tr>
+        <tr>
+            <td>UNIQUE 家族</td>
+            <td width="600" height="105"><img src="images/pic15.png" width="600" height="105"></td>
+            <td>我们让你的手机与众不同</td>
+        </tr>
+    </table>
+</div>
+<div id="footer"><h2>copyright &copy; 2015 UNIQUE APP - <a href="http://www.duoh.com" target="_blank">Duoh!&reg; n.v.</a></h2>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,242 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>UNIQUE STORY</title>
+<style>
+body{text-align:center; 
+  width:940px;
+  margin:0 auto;}
+#container{width:940px; 
+margin-left:auto;
+margin-right:auto;
+text-align: center;}
+#up{width:940px;height:229px;}
+#header{width:940px;height:24px;background:#CCC;text-align: center;}
+#title{width:940px;height:205px;background-image:url(images/title.png);background:#960;text-align: center;}
+#line{width:940px;height:30px;}
+#name{width:940px;height:201px;}
+#photo{width:700px;height:612px;}
+#story{width:940px;height:595px;}
+#product{width:940px;height:50px;}
+#tell{width:940px;height:558px;background-color:#FFF}
+
+#footer {	
+	margin: 0px auto;
+	position: relative;
+	background-color:#FFF;
+	border-top: 9px solid #F7F7F6;
+	width: 940px;
+	height:40px;
+	padding: 5px 0;
+	clear: both;
+}
+
+#footer h2 {
+	maring: 0;
+	text-align: center;
+	font: normal 10px Verdana, Arial, Helvetica, sans-serif;
+	color: #33FFCC;
+}
+
+#footer h2 a:visited, #footer h2 a:link {
+	color: #D3D8C4;
+	text-decoration: none;
+	border-bottom: 1px dotted #D3D8C4;
+}
+
+#footer h2 a:hover {
+	color: #F7F7F6;
+	text-decoration: none;
+	border-bottom: none;
+	background-color: #A5003B;
+}
+
+
+#right p strong {
+	color: #FF8080;
+}
+#footer p a {
+	font-family:Arial, Helvetica, sans-serif;
+	color:#80FFFF;
+}
+
+
+
+
+
+</style>
+ <link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+ <link href="css/huiyi8.css" type="text/css" rel="stylesheet" />
+<script src="js/jquery.min.js" type="text/javascript"></script>
+<script src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript">
+ $(document).ready(function(){
+ $('ul#nav li').hover(function(){
+ $(this).find('.subnav').slideDown('slow');
+ $(this).closest('a').addClass('active');
+ },function(){
+ $(this).find('.subnav').slideUp('fast');
+  $(this).find('a').removeClass('active');
+ });
+ });
+ $(document).ready(function(){
+ //Main Navigation HighLight Script
+  var path=location.pathname;
+  var pathArray=path.split('/');
+  var pArrLength=pathArray.length;
+  for(i=0;i<pArrLength;i++){
+  $("a[href*='"+pathArray[i]+"']").addClass("selected");
+  }
+  });
+  
+  
+  function setTab(name,cursel){
+	cursel_0=cursel;
+	for(var i=1; i<=links_len; i++){
+		var menu = document.getElementById(name+i);
+		var menudiv = document.getElementById("con_"+name+"_"+i);
+		if(i==cursel){
+			menu.className="off";
+			menudiv.style.display="block";
+		}
+		else{
+			menu.className="";
+			menudiv.style.display="none";
+		}
+	}
+}
+function Next(){                                                        
+	cursel_0++;
+	if (cursel_0>links_len)cursel_0=1
+	setTab(name_0,cursel_0);
+} 
+var name_0='one';
+var cursel_0=1;
+var ScrollTime=3000;//循环周期，可任意更改（毫秒）
+var links_len,iIntervalId;
+onload=function(){
+	var links = document.getElementById("tab1").getElementsByTagName('li')
+	links_len=links.length;
+	for(var i=0; i<links_len; i++){
+		links[i].onmouseover=function(){
+			clearInterval(iIntervalId);
+			this.onmouseout=function(){
+				iIntervalId = setInterval(Next,ScrollTime);;
+			}
+		}
+	}
+	document.getElementById("con_"+name_0+"_"+links_len).parentNode.onmouseover=function(){
+		clearInterval(iIntervalId);
+		this.onmouseout=function(){
+			iIntervalId = setInterval(Next,ScrollTime);;
+		}
+	}
+	setTab(name_0,cursel_0);
+	iIntervalId = setInterval(Next,ScrollTime);
+}
+
+ </script>
+
+</head>
+
+<body>
+<div class="container">
+<div id="up">
+<div id="header">
+ <ul id="nav"> 
+                <li><a href="word.html">UNIQUE</a> 
+                </li> 
+                <li><a href="#">社交</a> 
+                    <ul class="subnav"> 
+                        <li><a href="http://www.phpddt.com/">聊天</a></li> 
+                        <li><a href="http://www.phpddt.com/">交友</a></li> 
+                    </ul> 
+                </li> 
+  <li><a href="#">壁纸</a> 
+                    <ul class="subnav"> 
+                        <li><a href="http://www.phpddt.com/">动态壁纸</a></li> 
+                        <li><a href="http://www.phpddt.com/">桌面主题</a></li> 
+                    </ul> 
+                </li> 
+                <li><a href="#">摄影</a> 
+                    <ul class="subnav"> 
+                        <li><a href="http://www.phpddt.com/">相机</a></li> 
+                        <li><a href="http://www.phpddt.com/">照片美化</a></li> 
+                    </ul> 
+                </li> 
+                <li><a href="#">影音</a> 
+                    <ul class="subnav"> 
+                        <li><a href="#">音乐</a></li> 
+                        <li><a href="#">电影</a></li> 
+                         <li><a href="#">播放器</a></li>
+                    </ul> 
+                </li> 
+                <li><a href="#">生活</a> 
+                    <ul class="subnav"> 
+                        <li><a href="#">日历</a></li> 
+                        <li><a href="#">天气</a></li> 
+                    </ul> 
+                </li> 
+                <li><a href="#">学习</a> 
+                    <ul class="subnav"> 
+                        <li><a href="#">笔记</a></li> 
+                        <li><a href="#">考试</a></li> 
+                    </ul> 
+                </li> 
+				   <li><a href="#">旅行</a> 
+                    <ul class="subnav"> 
+                        <li><a href="#">攻略</a></li> 
+                        <li><a href="#">购票</a></li> 
+                         <li><a href="#">航班酒店</a></li> 
+                          <li><a href="#">导航</a></li> 
+                    </ul> 
+                </li> 
+                  <li>
+                  <a href="#">阅读</a> 
+                    <ul class="subnav"> 
+                        <li><a href="#">电子书</a></li> 
+                        <li><a href="#">漫画</a></li> 
+                    </ul> 
+                </li> 
+
+</ul>
+</div>
+<div id="title"><img src="images/title.png" width="940" height="205"></div>
+</div>
+<div id="buttom">
+<div id="line"><img src="images/line2.fw.png" width="940" height="30"></div>
+<div id="name"><img src="images/name2.png" width="940" height="201"></div>
+<div id="photo"><img src="images/photo2.png" width="940" height="612"></div>
+<div id="story"><img src="images/story2.fw.png" width="940" height="595"></div>
+<div id="product"><img src="images/product.fw.png" width="940" height="50"></div>
+<div id="tell">
+<div class="tab1" id="tab1">
+	<div class="menu">
+		<ul>
+			<li id="one1" onClick="setTab('one',1)">最美时光</li>
+			<li id="one2" onClick="setTab('one',2)">最美壁纸</li>
+			<li id="one3" onClick="setTab('one',3)">Unique游戏</li>
+			<li id="one4" onClick="setTab('one',4)">空气锁屏</li>
+		</ul>
+	</div>
+	<div class="menudiv">
+		<div id="con_one_1"><a href="app.html" target="_self"><img src="images/pro1.fw.png" width="940" height="530"></a></div>
+		<div id="con_one_2" style="display:none;"><img src="images/pro2.fw.png" width="940" height="530"></div>
+		<div id="con_one_3" style="display:none;"><img src="images/pro6.fw.png" width="940" height="530"></div>
+		<div id="con_one_4" style="display:none;"><img src="images/pro4.fw.png" width="940" height="530"></div>
+	</div>
+</div>
+
+
+
+
+</div>
+
+
+</div>
+<div id="footer"><h2>copyright &copy; 2015 UNIQUE APP - <a href="http://www.duoh.com" target="_blank">Duoh!&reg; n.v.</a></h2>
+</div>
+</div>
+</body>
+</html>

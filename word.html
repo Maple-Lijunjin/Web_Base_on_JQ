@@ -1,0 +1,164 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Thanks</title>
+<style>
+body{background:#FFF;
+ text-align:center; 
+  width:940px;
+  margin:0 auto;
+     padding: 0;
+	 font-family:arial;
+	 }
+#container{width:940px; 
+margin-left:auto;
+margin-right:auto;
+text-align: center;}
+#up{width:940px;height:877px;}
+#header{width:940px;height:24px;background:#CCC;text-align: center;}
+#title{width:940px;height:205px;background-image:url(images/title.png);background:#960;text-align: center;}
+#to{width:940px;height:60px;}
+#middle{width:940px;height:588px;background-image:url(images/mid2.png);}
+#footer {	
+	margin: 0px auto;
+	position: relative;
+	background-color:#FFF;
+	border-top: 9px solid #F7F7F6;
+	width: 940px;
+	height:40px;
+	padding: 5px 0;
+	clear: both;
+}
+
+#footer h2 {
+	maring: 0;
+	text-align: center;
+	font: normal 10px Verdana, Arial, Helvetica, sans-serif;
+	color: #33FFCC;
+}
+
+#footer h2 a:visited, #footer h2 a:link {
+	color: #D3D8C4;
+	text-decoration: none;
+	border-bottom: 1px dotted #D3D8C4;
+}
+
+#footer h2 a:hover {
+	color: #F7F7F6;
+	text-decoration: none;
+	border-bottom: none;
+	background-color: #A5003B;
+}
+
+
+#right p strong {
+	color: #FF8080;
+}
+#footer p a {
+	font-family:Arial, Helvetica, sans-serif;
+	color:#80FFFF;
+}
+
+
+
+
+
+
+</style>
+  <link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+ <script src="js/jquery-1.9.1.min.js"></script>
+ <script type="text/javascript">
+ $(document).ready(function(){
+ $('ul#nav li').hover(function(){
+ $(this).find('.subnav').slideDown('slow');
+ $(this).closest('a').addClass('active');
+ },function(){
+ $(this).find('.subnav').slideUp('fast');
+  $(this).find('a').removeClass('active');
+ });
+ });
+ $(document).ready(function(){
+ //Main Navigation HighLight Script
+  var path=location.pathname;
+  var pathArray=path.split('/');
+  var pArrLength=pathArray.length;
+  for(i=0;i<pArrLength;i++){
+  $("a[href*='"+pathArray[i]+"']").addClass("selected");
+  }
+  });
+ </script>
+
+</head>
+
+<body>
+<div class="container">
+<div id="up">
+<div id="header">
+ <ul id="nav"> 
+                <li><a href="word.html">UNIQUE</a> 
+                </li>  
+                <li><a href="#">社交</a> 
+                    <ul class="subnav"> 
+                        <li><a href="http://www.phpddt.com/">聊天</a></li> 
+                        <li><a href="http://www.phpddt.com/">交友</a></li> 
+                    </ul> 
+                </li> 
+  <li><a href="#">壁纸</a> 
+                    <ul class="subnav"> 
+                        <li><a href="http://www.phpddt.com/">动态壁纸</a></li> 
+                        <li><a href="http://www.phpddt.com/">桌面主题</a></li> 
+                    </ul> 
+                </li> 
+                <li><a href="#">摄影</a> 
+                    <ul class="subnav"> 
+                        <li><a href="http://www.phpddt.com/">相机</a></li> 
+                        <li><a href="http://www.phpddt.com/">照片美化</a></li> 
+                    </ul> 
+                </li> 
+                <li><a href="#">影音</a> 
+                    <ul class="subnav"> 
+                        <li><a href="#">音乐</a></li> 
+                        <li><a href="#">电影</a></li> 
+                         <li><a href="#">播放器</a></li>
+                    </ul> 
+                </li> 
+                <li><a href="#">生活</a> 
+                    <ul class="subnav"> 
+                        <li><a href="#">日历</a></li> 
+                        <li><a href="#">天气</a></li> 
+                    </ul> 
+                </li> 
+                <li><a href="#">学习</a> 
+                    <ul class="subnav"> 
+                        <li><a href="#">笔记</a></li> 
+                        <li><a href="#">考试</a></li> 
+                    </ul> 
+                </li> 
+				   <li><a href="#">旅行</a> 
+                    <ul class="subnav"> 
+                        <li><a href="#">攻略</a></li> 
+                        <li><a href="#">购票</a></li> 
+                         <li><a href="#">航班酒店</a></li> 
+                          <li><a href="#">导航</a></li> 
+                    </ul> 
+                </li> 
+                  <li>
+                  <a href="#">阅读</a> 
+                    <ul class="subnav"> 
+                        <li><a href="#">电子书</a></li> 
+                        <li><a href="#">漫画</a></li> 
+                    </ul> 
+                </li> 
+
+</ul>
+</div>
+<div id="title"><img src="images/title.png" width="940" height="205"></div>
+<div id="to"><a href="dynamic.html" target="_self"><img src="images/to.png" width="940" height="60"></a></div>
+<div id="middle"></div>
+</div>
+<div id="footer"><h2>copyright &copy; 2015 UNIQUE APP - <a href="http://www.duoh.com" target="_blank">Duoh!&reg; n.v.</a></h2>
+</div>
+</div>
+</body>
+</html>

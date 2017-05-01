@@ -1,0 +1,434 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>UNIQUE APP</title>
+ <style>
+body{background:#FFF;
+ text-align:center; 
+  width:940px;
+  margin:0 auto;
+     padding: 0;
+	 font-family:arial;
+	 }
+#center { MARGIN-RIGHT: auto; MARGIN-LEFT: auto; }
+#container{width:940px; 
+margin-left:auto;
+margin-right:auto;
+text-align: center;}
+#header{width:940px;height:24px;background:#CCC;text-align: center;}
+#title{width:940px;height:205px;background-image:url(images/title.png);background:#960;text-align: center;}
+#banner_tabs{width:940px;heigh:588px;float:left;}
+.flexslider {
+	margin: 0px auto 20px;
+	position: relative;
+	width: 100%;
+	height: 588px;
+	overflow: hidden;
+	zoom: 1;
+}
+
+.flexslider .slides li {
+	width: 100%;
+	height: 100%;
+}
+
+.flex-direction-nav a {
+	width: 70px;
+	height: 70px;
+	line-height: 99em;
+	overflow: hidden;
+	margin: -35px 0 0;
+	display: block;
+	background: url(images/ad_ctr.png) no-repeat;
+	position: absolute;
+	top: 50%;
+	z-index: 10;
+	cursor: pointer;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	-webkit-transition: all .3s ease;
+	border-radius: 35px;
+}
+
+.flex-direction-nav .flex-next {
+	background-position: 0 -70px;
+	right: 0;
+}
+
+.flex-direction-nav .flex-prev {
+	left: 0;
+}
+
+.flexslider:hover .flex-next {
+	opacity: 0.8;
+	filter: alpha(opacity=25);
+}
+
+.flexslider:hover .flex-prev {
+	opacity: 0.8;
+	filter: alpha(opacity=25);
+}
+
+.flexslider:hover .flex-next:hover,
+.flexslider:hover .flex-prev:hover {
+	opacity: 1;
+	filter: alpha(opacity=50);
+}
+
+.flex-control-nav {
+	width: 100%;
+	position: absolute;
+	bottom: 10px;
+	text-align: center;
+}
+
+.flex-control-nav li {
+	margin: 0 2px;
+	display: inline-block;
+	zoom: 1;
+	*display: inline;
+}
+
+.flex-control-paging li a {
+	background: url(images/dot.png) no-repeat 0 -16px;
+	display: block;
+	height: 16px;
+	overflow: hidden;
+	text-indent: -99em;
+	width: 16px;
+	cursor: pointer;
+}
+
+.flex-control-paging li a.flex-active,
+.flex-control-paging li.active a {
+	background-position: 0 0;
+}
+
+.flexslider .slides a img {
+	width: 100%;
+	height: 588px;
+	display: block;
+}
+#name{width:700px;height:150px;}
+#photo{width:700px;height:450px;}
+#story{width:700px;height:170px;background-color:#FFFFFF;}
+#word{width:700px;height:90px;background-color:#FFFFFF;}
+#button{width:700px;height:50px;background-color:#FFFFFF;}
+#line{width:700px;height:30px;background-color:#FFFFFF;}
+#big{width:940px;height:1068px;background-color:#FFFFFF;}
+#down{width:700px;height:1068px;background-color:#FFFFFF;}
+#app1{width:365px;height:284px;margin:0 0 0 0;float:left;text-align:left;}
+#app2{width:335px;height:284px;margin:0 0 0 0;float:left;}
+#word1{width:365px;height:250px;margin:0 0 0 0;float:left;text-align:left;}
+#word2{width:335px;height:250px;margin:0 0 0 0;float:left;}
+#app3{width:365px;height:284px;margin:0 0 0 0;float:left;text-align:left;}
+#app4{width:335px;height:284px;margin:0 0 0 0;float:left;}
+#word3{width:365px;height:250px;margin:0 0 0 0;float:left;text-align:left;}
+#word4{width:335px;height:250px;margin:0 0 0 0;float:left;}
+#blank{width:20px;height:1838px;background-color:#FFFFFF;float:left;}
+#firstpane{width:220px;height:1838px;float:left;background-color:#FFF}
+#left{width:700px;height:1838px;margin:0 0 0 0;float:left;}
+#footer {	
+	margin: 0px auto;
+	position: relative;
+	background-color:#FFF;
+	border-top: 9px solid #F7F7F6;
+	width: 940px;
+	height:40px;
+	padding: 5px 0;
+	clear: both;
+}
+
+#footer h2 {
+	maring: 0;
+	text-align: center;
+	font: normal 10px Verdana, Arial, Helvetica, sans-serif;
+	color: #33FFCC;
+}
+
+#footer h2 a:visited, #footer h2 a:link {
+	color: #D3D8C4;
+	text-decoration: none;
+	border-bottom: 1px dotted #D3D8C4;
+}
+
+#footer h2 a:hover {
+	color: #F7F7F6;
+	text-decoration: none;
+	border-bottom: none;
+	background-color: #A5003B;
+}
+
+
+#right p strong {
+	color: #FF8080;
+}
+#footer p a {
+	font-family:Arial, Helvetica, sans-serif;
+	color:#80FFFF;
+}
+
+
+
+
+
+
+
+
+ </style>
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+<link href="css/zzsc.css" type="text/css" rel="stylesheet" />
+ <link href="css/lrtk.css" rel="stylesheet" type="text/css" media="all"/>
+<script src="js/jquery-1.7.2.min.js"></script>
+ <script src="js/jquery-1.9.1.min.js"></script>
+ <script src="js/jquery-1.10.2.min.js"></script>
+<script src="js/slider.js"></script>
+ <script type="text/javascript">
+ $(document).ready(function(){
+ $('ul#nav li').hover(function(){
+ $(this).find('.subnav').slideDown('slow');
+ $(this).closest('a').addClass('active');
+ },function(){
+ $(this).find('.subnav').slideUp('fast');
+  $(this).find('a').removeClass('active');
+ });
+ });
+ $(document).ready(function(){
+ //Main Navigation HighLight Script
+  var path=location.pathname;
+  var pathArray=path.split('/');
+  var pArrLength=pathArray.length;
+  for(i=0;i<pArrLength;i++){
+  $("a[href*='"+pathArray[i]+"']").addClass("selected");
+  }
+  });
+  
+  $(function() {
+	var bannerSlider = new Slider($('#banner_tabs'), {
+		time: 5000,
+		delay: 400,
+		event: 'hover',
+		auto: true,
+		mode: 'fade',
+		controller: $('#bannerCtrl'),
+		activeControllerCls: 'active'
+	});
+	$('#banner_tabs .flex-prev').click(function() {
+		bannerSlider.prev()
+	});
+	$('#banner_tabs .flex-next').click(function() {
+		bannerSlider.next()
+	});
+});
+
+$(document).ready(function(){
+ $(".imgtext").hide();
+ $(".zzsc").hover(function(){
+  $(".imgtext",this).slideToggle(500);
+ });
+});
+
+$(document).ready(function(){
+	$("#firstpane .menu_body:eq(0)").show();
+	$("#firstpane p.menu_head").click(function(){
+		$(this).addClass("current").next("div.menu_body").slideToggle(300).siblings("div.menu_body").slideUp("slow");
+		$(this).siblings().removeClass("current");
+	});
+	$("#secondpane .menu_body:eq(0)").show();
+	$("#secondpane p.menu_head").mouseover(function(){
+		$(this).addClass("current").next("div.menu_body").slideDown(500).siblings("div.menu_body").slideUp("slow");
+		$(this).siblings().removeClass("current");
+	});
+	});
+
+ 
+
+ </script>
+
+<style type="text/css">
+body,td,th {
+	font-family: "MS Serif", "New York", serif;
+	color: #000;
+	font-size: 14px;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+<div id="header">
+ <ul id="nav"> 
+                <li><a href="word.html">UNIQUE</a> 
+                </li> 
+                <li><a href="#">社交</a> 
+                    <ul class="subnav"> 
+                        <li><a href="http://www.phpddt.com/">聊天</a></li> 
+                        <li><a href="http://www.phpddt.com/">交友</a></li> 
+                    </ul> 
+                </li> 
+  <li><a href="#">壁纸</a> 
+                    <ul class="subnav"> 
+                        <li><a href="http://www.phpddt.com/">动态壁纸</a></li> 
+                        <li><a href="http://www.phpddt.com/">桌面主题</a></li> 
+                    </ul> 
+                </li> 
+                <li><a href="#">摄影</a> 
+                    <ul class="subnav"> 
+                        <li><a href="http://www.phpddt.com/">相机</a></li> 
+                        <li><a href="http://www.phpddt.com/">照片美化</a></li> 
+                    </ul> 
+                </li> 
+                <li><a href="#">影音</a> 
+                    <ul class="subnav"> 
+                        <li><a href="#">音乐</a></li> 
+                        <li><a href="#">电影</a></li> 
+                         <li><a href="#">播放器</a></li>
+                    </ul> 
+                </li> 
+                <li><a href="#">生活</a> 
+                    <ul class="subnav"> 
+                        <li><a href="#">日历</a></li> 
+                        <li><a href="#">天气</a></li> 
+                    </ul> 
+                </li> 
+                <li><a href="#">学习</a> 
+                    <ul class="subnav"> 
+                        <li><a href="#">笔记</a></li> 
+                        <li><a href="#">考试</a></li> 
+                    </ul> 
+                </li> 
+				   <li><a href="#">旅行</a> 
+                    <ul class="subnav"> 
+                        <li><a href="#">攻略</a></li> 
+                        <li><a href="#">购票</a></li> 
+                         <li><a href="#">航班酒店</a></li> 
+                          <li><a href="#">导航</a></li> 
+                    </ul> 
+                </li> 
+                  <li>
+                  <a href="#">阅读</a> 
+                    <ul class="subnav"> 
+                        <li><a href="#">电子书</a></li> 
+                        <li><a href="#">漫画</a></li> 
+                    </ul> 
+                </li> 
+
+</ul>
+</div>
+<div id="title"><img src="images/title.png" width="940" height="205"></div>
+</div>
+<div id="banner_tabs" class="flexslider">
+	<ul class="slides">
+		<li>
+			<a title="" target="_blank" href="#">
+				<img width="940" height="588" alt="" style="background: url(images/banner1.jpg) no-repeat center;" src="images/alpha.png">
+			</a>
+		</li>
+		<li>
+			<a title="" href="#">
+				<img width="940" height="588" alt="" style="background: url(images/banner2.jpg) no-repeat center;" src="images/alpha.png">
+			</a>
+		</li>
+		<li>
+			<a title="" href="#">
+				<img width="940" height="588" alt="" style="background: url(images/banner3.jpg) no-repeat center;" src="images/alpha.png">
+			</a>
+		</li>
+        <li>
+			<a title="" href="#">
+				<img width="940" height="588" alt="" style="background: url(images/banner4.jpg) no-repeat center;" src="images/alpha.png">
+			</a>
+		</li>
+	</ul>
+	<ul class="flex-direction-nav">
+		<li><a class="flex-prev" href="javascript:;">Previous</a></li>
+		<li><a class="flex-next" href="javascript:;">Next</a></li>
+	</ul>
+	<ol id="bannerCtrl" class="flex-control-nav flex-control-paging">
+		<li><a>1</a></li>
+		<li><a>2</a></li>
+		<li><a>2</a></li>
+        <li><a>2</a></li>
+	</ol>
+</div>
+<div id="big">
+<div id="left">
+<div id="name"><img src="images/name1.png" width="700" height="150"></div>
+<div id="photo"><img src="images/photo.png" width="700" height="450"></div>
+<div id="story">
+<div id="word"> <img src="images/story.png" width="700" height="90"></div>
+<div id="button"> <a href="story.html" target="_self"><img src="images/button.png" width="150" height="50"></a></div>
+<div id="line"> <img src="images/line.png" width="700" height="30"></div>
+</div>
+<div id="down">
+<div id="app1" class="zzsc">
+<a href="#" target="_blank"><img src="images/app1.png"></a>
+<div class="text">
+<div class="imgtext">纪念碑古 - 几何视觉的探险 </div>
+</div>
+</div>
+<div id="app2" class="zzsc">
+<a href="#" target="_blank"><img src="images/app2.png"></a>
+<div class="text">
+<div class="imgtext">榫卯 - 匠人的巧思</div>
+</div>
+</div>
+<div id="word1"><img src="images/word1.png" width="335" height="250"></div>
+<div id="word2"><img src="images/word2.png" width="335" height="250"></div>
+<div id="app3" class="zzsc">
+<a href="#" target="_blank"><img src="images/app3.png"></a>
+<div class="text">
+<div class="imgtext">Threes! - 一生二，二生三，三生无穷</div>
+</div>
+</div>
+<div id="app4" class="zzsc">
+<a href="#" target="_blank"><img src="images/app4.png"></a>
+<div class="text">
+<div class="imgtext">SoundHound - 我在唱什么？</div>
+</div>
+</div>
+<div id="word3"><img src="images/word3.png" width="335" height="250"></div>
+<div id="word4"><img src="images/word4.png" width="335" height="250"></div>
+</div>
+</div>
+<div id="blank"></div>
+ <div id="firstpane" class="menu_list">
+    <p class="menu_head current">发展简史</p>
+    <div style="display:block" class=menu_body >
+    </div>
+    <p class="menu_head">UNIQUE产品</p>
+    <div style="display:none" class=menu_body >
+      <a href="#">产品介绍</a>
+      <a href="#">产品大全</a>
+    </div>
+    <p class="menu_head">UNIQUE 文化</p>
+    <div style="display:none" class=menu_body >
+      <a href="#">发现美</a>
+      <a href="#">UNIQUE宗旨</a>
+    </div>
+    <p class="menu_head">UNIQUE工作室</p>
+    <div style="display:none" class=menu_body >
+      <a href="#">北京工作室</a>
+      <a href="#">上海工作室</a>
+      <a href="#">深圳工作室</a>
+
+    </div>
+    <p class="menu_head">UNIQUE团队</p>
+    <div style="display:none" class=menu_body >
+      <a href="#">One People</a>
+      <a href="#">One Team</a>
+</div>
+ <p class="menu_head">UNIQUE大事记</p>
+    <div style="display:none" class=menu_body >
+      <a href="#">2014年6月</a>
+      <a href="#">2014年11月</a>
+      <a href="#">2015年4月</a>
+      <a href="#">2015年10月</a>
+</div>
+</div>
+<div id="footer"><h2>copyright &copy; 2015 UNIQUE APP - <a href="http://www.duoh.com" target="_blank">Duoh!&reg; n.v.</a></h2>
+</div>
+
+</div>
+</body>
+</html>
